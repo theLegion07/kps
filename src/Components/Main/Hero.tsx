@@ -1,9 +1,9 @@
-import { Button } from '@mui/material'
 import { Github, InstagramIcon, Linkedin, Mail, MousePointerClick } from 'lucide-react'
 import image from '../../assets/profile.webp'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { pageVariants, pageTransition } from '../../utils/pageAnimations'
+import Button from '@mui/material/Button'
 
 const Hero = () => {
   const [text,settext] = useState<string>("");

@@ -1,10 +1,10 @@
-import { Button } from "@mui/material";
 import { ArrowRight } from "lucide-react";
 import sas from "../../assets/Images/SAS.webp";
 import EMl from "../../assets/Images/EML.webp";
 import sp from "../../assets/Images/SP.webp";
 import ProjectCard from "../../utils/ProjectCard";
 import { useNavigate } from "react-router-dom";
+import Button from "@mui/material/Button";
 
 const ProjPrev = () => {
   const navigate = useNavigate()

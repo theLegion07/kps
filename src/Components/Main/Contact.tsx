@@ -1,9 +1,10 @@
-import { Button, TextField } from "@mui/material";
 import  { motion } from "framer-motion";
 import { Send } from "lucide-react";
 import React, { useState } from "react";
 import { pageVariants, pageTransition } from "../../utils/pageAnimations";
 import { useNavigate } from "react-router-dom";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
 
 //shape of the formData
 interface FormData {
