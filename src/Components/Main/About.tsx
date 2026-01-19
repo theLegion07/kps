@@ -107,7 +107,7 @@ const Cloud = [
               <div className="flex  gap-2 flex-wrap sm:flex-wrap sm:gap-2 mt-3 ">
                  {language.map((lang) => (
                   <div key={lang.id} className="flex max-w-max gap-2 bg-white/15 py-1 px-3 rounded-sm">
-                     <img src={lang.icon} loading="lazy" className="w-4 aspect-square"/>
+                     <img src={lang.icon}  className="w-4 aspect-square"/>
                      <p className="text-justify hyphens-auto text-white/60 font-normal text-sm">
               {lang.name}
             </p>
@@ -122,7 +122,7 @@ const Cloud = [
               <div className="flex  gap-2  flex-wrap sm:gap-2 mt-3 ">
                  {FTT.map((lang) => (
                   <div key={lang.id} className="flex max-w-max gap-2 bg-white/15 py-1 px-4 rounded-sm">
-                     <img src={lang.icon} loading="lazy" className="w-4 aspect-square"/>
+                     <img src={lang.icon}  className="w-4 aspect-square"/>
                      <p className="text-justify hyphens-auto text-white/60 font-normal text-sm">
               {lang.name}
             </p>
@@ -137,7 +137,7 @@ const Cloud = [
               <div className="flex gap-2 flex-wrap sm:gap-2 mt-3 ">
                  {DataB.map((lang) => (
                   <div key={lang.id} className="flex max-w-max gap-2 bg-white/15 py-1 px-4 rounded-sm">
-                     <img src={lang.icon} loading="lazy" className="w-4 aspect-square"/>
+                     <img src={lang.icon}  className="w-4 aspect-square"/>
                      <p className="text-justify hyphens-auto text-white/60 font-normal text-sm">
               {lang.name}
             </p>
@@ -152,7 +152,7 @@ const Cloud = [
               <div className="flex gap-2 flex-wrap sm:gap-2 mt-3 ">
                  {Cloud.map((lang) => (
                   <div key={lang.id} className="flex max-w-max gap-2 bg-white/15 py-1 px-4 rounded-sm">
-                     <img src={lang.icon} loading="lazy" className="w-4 aspect-square"/>
+                     <img src={lang.icon}  className="w-4 aspect-square"/>
                      <p className="text-justify hyphens-auto text-white/60 font-normal text-sm">
               {lang.name}
             </p>

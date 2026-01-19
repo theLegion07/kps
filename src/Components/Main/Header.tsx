@@ -6,6 +6,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const navigate = useNavigate()
+  const [loaded,setloaded] = useState<boolean>(false)
   const sidebarref = useRef<HTMLDivElement | null>(null)
   const [open , setOpen] = useState<boolean>(false);
   const [scrolling , setScrolled] = useState<boolean>(false)
@@ -53,7 +54,13 @@ const Header = () => {
       ${scrolling ?  "bg-black/60 border  transition-all 0.15s ease-in-out backdrop-blur-md  " : "bg-none" } `}>
        {/* left div */}
        <div className="object-cover flex ">
-         <img src={logo} alt="" className="w-full max-w-10! aspect-square cursor-pointer" onClick={() => navigate("/")}/>
+         <img src={logo} loading="eager" alt="" className={`w-full max-w-10! aspect-square cursor-pointer ${loaded ? "opacity-100" : "opacity-0"}`} onClick={() => navigate("/")} 
+         onLoad={() => setloaded(true)}/>
+         {
+          !loaded && (
+            <div className="w-full max-w-10! aspect-square rounded-full bg-white/10 animate-pulse" />
+          )
+         }
        </div>
        {/* center div */}
        <div className="hidden md:block " >

@@ -1,12 +1,13 @@
 import { Button } from '@mui/material'
 import { Github, InstagramIcon, Linkedin, Mail, MousePointerClick } from 'lucide-react'
-import image from '../../assets/profile.svg'
+import image from '../../assets/profile.webp'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { pageVariants, pageTransition } from '../../utils/pageAnimations'
 
 const Hero = () => {
   const [text,settext] = useState<string>("");
+  const [loaded,setloaded] = useState<boolean>(false)
   const texts = [
     "Web Developer",
     "Web Designer",
@@ -42,8 +43,11 @@ const Hero = () => {
           animate="animate"
           exit="exit"
           transition={pageTransition}>
-         <img src= {image} alt="Profile" className='h-60!' 
-          />
+         <img src= {image} loading='eager' alt="Profile" className={`h-60! ${loaded ? "opacity-100" : "opacity-0"} rounded-2xl`} 
+          onLoad={() => setloaded(true)} />
+          {!loaded && (
+  <div className="h-60 aspect-square rounded-full bg-white/10 animate-pulse" />
+)}
        <div className='sm:flex sm:flex-col sm:justify-center sm:items-center'>
          <h1 className=' sm:font-bold italic text-xs sm:text-2xl'>Hello There , Iam</h1>
        <p className='text-primary-font font-bold sm:font-normal text-4xl md:text-7xl'>Pranay Sai Kolloju</p>
