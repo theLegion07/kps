@@ -150,8 +150,8 @@ export const OverAllStuff = () => {
           <h1 className="text-white text-sm sm:text-xl lg:text-3xl group-hover:text-yellow-300 ">
             Lets Connect Together
           </h1>
-          <div className="  bg-black/30  flex px-4 py-3 space-x-5 rounded-full border border-white/30 shadow-[inset_0_0_10px_rgba(255,255,255,0.3)]">
-            <h1 className="text-white">{email}</h1>
+          <div className="  bg-black/3 w-full max-w-max 0  flex px-4 py-3 space-x-5 rounded-full border border-white/30 shadow-[inset_0_0_10px_rgba(255,255,255,0.3)]">
+            <h1 className="text-white text-sm">{email}</h1>
             <div
               onMouseEnter={() => setinfo(true)}
               onMouseLeave={() => setinfo(false)}
