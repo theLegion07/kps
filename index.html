@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/svg" href="/kps/assets/Kps-RFo1Vq5l.svg">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <title>Pranay Sai Kolloju</title>
+    <script type="module" crossorigin src="/kps/assets/index-DOVeNmWH.js"></script>
+    <link rel="stylesheet" crossorigin href="/kps/assets/index-Dhu4wJqp.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+       function loadBackgroundVideo() {
+    const video = document.createElement("video")
+    video.id = "bg-video"
+    video.autoplay = true
+    video.loop = true
+    video.muted = true        // REQUIRED
+    video.playsInline = true
+
+    video.style.position = "fixed"
+    video.style.top = "0"
+    video.style.left = "0"
+    video.style.width = "100%"
+    video.style.height = "100%"
+    video.style.objectFit = "cover"
+    video.style.zIndex = "-1"
+    video.style.opacity = "0.4"
+
+    const source = document.createElement("source")
+    source.src = "./background.mp4"
+    source.type = "video/mp4"
+
+    video.appendChild(source)
+    document.body.prepend(video)
+
+    video.play().catch(err => {
+      console.warn("Background video autoplay blocked:", err)
+    })
+  }
+  window.addEventListener("DOMContentLoaded", loadBackgroundVideo)
+    </script>
+  </body>
+</html>
