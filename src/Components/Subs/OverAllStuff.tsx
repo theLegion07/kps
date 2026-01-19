@@ -49,7 +49,7 @@ export const OverAllStuff = () => {
 "
           initial={{ opacity: 0, x: -200 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ amount: 0.3 }}
+          viewport={{once:true, amount: 0.3 }}
           transition={{ duration: 0.9, ease: "easeInOut" }}
         >
           <h1 className="text-white text-primary-font text-sm sm:text-xl lg:text-3xl mb-5 group-hover:text-yellow-300">
@@ -69,7 +69,7 @@ export const OverAllStuff = () => {
 "
           initial={{ opacity: 0, y: -200 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ amount: 0.3 }}
+          viewport={{once:true, amount: 0.3 }}
           transition={{ duration: 0.9, ease: "easeInOut" }}
         >
           {" "}
@@ -125,7 +125,7 @@ export const OverAllStuff = () => {
 "
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ amount: 0.3 }}
+          viewport={{once:true, amount: 0.3 }}
           transition={{ duration: 1, ease: "easeInOut" }}
         >
           <h1 className="text-white text-primary-font text-sm  lg:text-3xl sm:text-xl  mb-5 group-hover:text-yellow-300">
@@ -144,7 +144,7 @@ export const OverAllStuff = () => {
 "
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ amount: 0.3 }}
+          viewport={{once:true, amount: 0.3 }}
           transition={{ duration: 1, ease: "easeInOut" }}
         >
           <h1 className="text-white text-sm sm:text-xl lg:text-3xl group-hover:text-yellow-300 ">
