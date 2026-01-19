@@ -33,12 +33,19 @@
     video.style.zIndex = "-1"
     video.style.opacity = "0.4"
 
-    const source = document.createElement("source")
-    source.src = "./background.mp4"
-    source.type = "video/mp4"
+    // 1. Add WebM (First choice - smallest)
+  const webm = document.createElement("source");
+  webm.src = "./background_opt.webm";
+  webm.type = "video/webm";
+  video.appendChild(webm);
 
-    video.appendChild(source)
-    document.body.prepend(video)
+  // 2. Add MP4 (Backup - widely compatible)
+  const mp4 = document.createElement("source");
+  mp4.src = "./background_opt.mp4";
+  mp4.type = "video/mp4";
+  video.appendChild(mp4);
+
+  document.body.prepend(video);
 
     video.play().catch(err => {
       console.warn("Background video autoplay blocked:", err)
