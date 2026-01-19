@@ -107,7 +107,7 @@ export const OverAllStuff = () => {
               
               transition-all 0.15 ease-in-out rounded flex gap-2"
                   >
-                    <img src={tech.icon} className="w-4 h-4" />
+                    <img src={tech.icon} loading="lazy" className="w-4 h-4" />
                     {tech.name}
                   </span>
                 ))}

@@ -23,6 +23,7 @@ const ProjectCard:React.FC<Data> = ({title,tech,image,desc,cardDes}) => {
       <div className="w-full  bg-white/10 border border-yellow-300 sm:border-none rounded-xl object-cover  ">
             <div className="object-cover overflow-hidden pt-5">
               <img
+                loading='lazy'
                 src={image}
                 alt="Smart Attendance System using facial Recognition"
                 className="w-full aspect-video hover:scale-[1.02] transition-all 0.15s ease-in-out"

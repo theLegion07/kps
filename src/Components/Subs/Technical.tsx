@@ -80,7 +80,7 @@ const Technical = () => {
             key={tech.id}
             className="flex justify-center items-center max-w-max gap-2 bg-white/15 py-1 px-4 rounded-sm"
           >
-            <img src={tech.icon} alt={tech.name} className="w-4 aspect-square" />
+            <img src={tech.icon} loading="lazy" alt={tech.name} className="w-4 aspect-square" />
             <span className="text-sm sm:text-[1em] text-white">{tech.name}</span>
           </motion.div>
          ))
