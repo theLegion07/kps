@@ -37,7 +37,7 @@ const Hero = () => {
   return () => clearTimeout(timeoutId);
 }, []);
   return (
-    <motion.main className=' text-white flex flex-col min-h-screen place-content-center place-items-center gap-4'
+    <motion.main className='relative text-white flex flex-col min-h-screen place-content-center place-items-center gap-4'
      variants={pageVariants}
           initial="initial"
           animate="animate"
@@ -46,8 +46,8 @@ const Hero = () => {
          <img src= {image} loading='eager' alt="Profile" className={`h-60! ${loaded ? "opacity-100" : "opacity-0"} rounded-2xl`} 
           onLoad={() => setloaded(true)} />
           {!loaded && (
-  <div className="h-60 aspect-square rounded-full bg-white/10 animate-pulse" />
-)}
+  <div className="absolute top-[20%] sm:top-[16%] h-60 aspect-square rounded-full bg-white/10 animate-pulse" />
+ )}
        <div className='sm:flex sm:flex-col sm:justify-center sm:items-center'>
          <h1 className=' sm:font-bold italic text-xs sm:text-2xl'>Hello There , Iam</h1>
        <p className='text-primary-font font-bold sm:font-normal text-4xl md:text-7xl'>Pranay Sai Kolloju</p>
