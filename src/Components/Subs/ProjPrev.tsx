@@ -30,17 +30,17 @@ const ProjPrev = () => {
           ))
          }
         </div>
-        <div className="text-center mt-5">
+        <div className="text-center mt-5 ">
           <Button
             sx={{
               textTransform: "none",
               color: "black",
-              backgroundColor: "white",
             }}
-            className="cursor-pointer! px-4! text-primary-font!  font-bold!"
+            className="cursor-pointer! px-4! text-primary-font! rounded-full!  
+            bg-gray-300! transition-all! 0.15s! hover:bg-white! ease-in-out!  "
             onClick={() => navigate("/Projects")}
           >
-            More <ArrowRight className="h-4 " />
+            View More <ArrowRight className="h-4! animate-pulse " />
           </Button>
         </div>
       </div>

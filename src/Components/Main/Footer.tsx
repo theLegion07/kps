@@ -36,17 +36,29 @@ const Footer = () => {
       </div>
        <div className='flex flex-col flex-1 p-6 border-l border-gray-300 space-y-2'>
          <h1 className='text-primary-font text-yellow-300 text-xl'>Let's Connect</h1>
-         <div className='flex gap-4'>
-         <InstagramIcon className='cursor-pointer text-white/60 hover:text-white max-h-5 hover:scale-[1.02]'  />
-         <Linkedin className='cursor-pointer text-white/60 hover:text-white max-h-5 hover:scale-[1.02]' />
-         <Github className='cursor-pointer text-white/60 hover:text-white max-h-5 hover:scale-[1.02]' />
-         <Mail className='cursor-pointer text-white/60 hover:text-white max-h-5 hover:scale-[1.02]' />
+          <div className='flex gap-4 text-white/20  '>
+         <button className='hover:scale-[1.02] bg-white/20 p-2 rounded-full hover:text-white transition-all 0.15s ease-in-out'>
+         <InstagramIcon className='cursor-pointer  max-h-5  '  />
+
+         </button>
+         <button className='hover:scale-[1.02] bg-white/20 p-2 rounded-full hover:text-white transition-all 0.15s ease-in-out'>
+         <Linkedin className='cursor-pointer max-h-5  ' />
+
+         </button>
+         <button className='hover:scale-[1.02] bg-white/20 p-2 rounded-full hover:text-white transition-all 0.15s ease-in-out'>
+         <Github className='cursor-pointer max-h-5  ' />
+
+         </button>
+         <button className='hover:scale-[1.02] bg-white/20 p-2 rounded-full hover:text-white transition-all 0.15s ease-in-out'>
+         <Mail className='cursor-pointer  max-h-5 ' />
+
+         </button>
        </div>
       </div>
     </div>
      <div className='flex justify-center gap-2'>
-      <p className='text-white/60 text-center  text-xs sm:text-sm '>© {new Date().getFullYear()} Pranay Sai Kolloju . All Rights Reserved.</p>
-      <p className='text-white/60 text-center  text-xs sm:text-sm'> Made with React.js and Tailwindcss</p>
+      <p className='text-white/60 text-center  text-[0.7em] sm:text-sm '>© {new Date().getFullYear()} Pranay Sai Kolloju . All Rights Reserved.</p>
+      <p className='text-white/60 text-center  text-[0.7em] sm:text-sm'> Made with React.js and Tailwindcss</p>
     </div>
    </div>
    </>

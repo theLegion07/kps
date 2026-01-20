@@ -67,10 +67,22 @@ const Hero = () => {
 
     
        <div className='flex gap-4 '>
-         <InstagramIcon className='cursor-pointer text-orange-600 max-h-5  hover:scale-[1.02]'  />
-         <Linkedin className='cursor-pointer max-h-5  hover:scale-[1.02]' />
-         <Github className='cursor-pointer max-h-5 hover:scale-[1.02]' />
-         <Mail className='cursor-pointer text-blue-500 max-h-5 hover:scale-[1.02]' />
+         <button className='hover:scale-[1.02] bg-white/20 p-2 rounded-full border border-white'>
+         <InstagramIcon className='cursor-pointer text-orange-600 max-h-5  '  />
+
+         </button>
+         <button className='hover:scale-[1.02] bg-white/20 p-2 rounded-full border border-white'>
+         <Linkedin className='cursor-pointer max-h-5  ' />
+
+         </button>
+         <button className='hover:scale-[1.02] bg-white/20 p-2 rounded-full border border-white'>
+         <Github className='cursor-pointer max-h-5 ' />
+
+         </button>
+         <button className='hover:scale-[1.02] bg-white/20 p-2 rounded-full border border-white'>
+         <Mail className='cursor-pointer text-blue-500 max-h-5 ' />
+
+         </button>
        </div>
        <div>
          <Button 
