@@ -5,6 +5,7 @@ import { pageVariants, pageTransition } from '../../utils/pageAnimations'
 const Articles = () => {
   return (
    <>
+     <title>Pranay Sai Kolloju - Articles</title>
     <motion.div className='bg-black/5 backdrop-blur-md  px-3 flex flex-col pt-[24%] sm:pt-[10%] pb-[5%] space-y-25  '
      variants={pageVariants}
           initial="initial"

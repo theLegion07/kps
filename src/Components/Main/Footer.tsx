@@ -29,7 +29,7 @@ const Footer = () => {
              <span className='block cursor-pointer hover:text-white' onClick={() => navigate("/Contact")}>
              Contact
             </span>
-             <span className='flex cursor-pointer hover:text-white' onClick={() => navigate("/about")}>
+             <span className='flex cursor-pointer hover:text-white'>
               Resume <ExternalLinkIcon className='max-h-4' />
             </span>
          </p>

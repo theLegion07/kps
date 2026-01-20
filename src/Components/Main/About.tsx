@@ -30,6 +30,7 @@ const Cloud = [
 ]
   return (
     <>
+     <title>Pranay Sai Kolloju - About</title>
      {/* Main Div */}
      <motion.div className=" bg-black/10 backdrop-blur-md min-h-screen pt-[25%] w-full sm:pt-[10%] pb-[5%] "
      variants={pageVariants}

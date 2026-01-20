@@ -5,6 +5,7 @@ import { projects } from "../../utils/ProjInfo"
 const Projects = () => {
   return (
    <>
+     <title>Pranay Sai Kolloju - Projects</title>
     <div className="bg-black/10 backdrop-blur-md min-h-screen pt-[25%] w-full sm:pt-[8%] pb-[5%]"> 
          <div className='text-white  pl-7    text-center relative top-1/8 space-y-3 '>
        <h1 className='text-white text-2xl font-bold text-primary-font sm:text-3xl md:text-5xl '>Projects</h1>

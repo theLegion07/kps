@@ -9,8 +9,6 @@ for (const path in icons) {
     .split('/')
     .pop()!
     .replace('.svg', '')
-    .toLowerCase()
-    console.log(key)
-    
+    .toLowerCase()    
   techIcons[key] = icons[path] as string
 }

@@ -34,6 +34,7 @@ const Contact = () => {
   };
   return (
     <>
+     <title>Pranay Sai Kolloju - Contact</title>
       {/* Main Div */}
       <motion.div className=" bg-black/10 backdrop-blur-md min-h-screen flex flex-col gap-10 items-center px-3  pt-[25%] sm:pt-[10%] pb-[5%]  "
        variants={pageVariants}
