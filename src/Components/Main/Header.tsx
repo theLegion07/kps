@@ -50,7 +50,7 @@ const Header = () => {
   return (
    <>
      {/* main div */}
-     <div className= {`flex fixed top-2 left-4 right-4 sm:left-[20%] sm:right-[20%] p-2  justify-around items-center  rounded-3xl  z-1000 
+     <div className= {`flex fixed top-0 left-0 right-0 sm:top-2 sm:left-[20%] sm:right-[20%] p-2  justify-around items-center  sm:rounded-3xl  z-1000 
       ${scrolling ?  "bg-black/60 border  transition-all 0.15s ease-in-out backdrop-blur-md  " : "bg-none" } `}>
        {/* left div */}
        <div className="object-cover flex ">
@@ -85,7 +85,7 @@ const Header = () => {
         <MenuIcon className="text-white cursor-pointer" onPointerDown={(e)=>{e.stopPropagation()
         sideOpen()
         }}/>
-         <div ref={sidebarref} className={`absolute bg-black/50 border border-white/30 shadow-[inset_0_0_10px_rgba(255,255,255,0.4)] 
+         <div ref={sidebarref} className={`absolute bg-black border border-white/30 shadow-[inset_0_0_10px_rgba(255,255,255,0.4)] 
          p-4 max-h-max top-10 min-w-1/2 rounded-xl ${open ? "opacity-100" : "opacity-0"} transition-all 0.15 ease-in-out `}
          onPointerDown={(e) => e.stopPropagation()}>
           <ul className="flex flex-col gap-4  px-2 py-1 rounded-full  max-w-max ">
