@@ -1,4 +1,5 @@
 import Button from '@mui/material/Button';
+import { motion } from 'framer-motion';
 import { ArrowRight, GithubIcon } from 'lucide-react'
 import React from 'react'
 
@@ -17,7 +18,11 @@ interface Data{
 const ProjectCard:React.FC<Data> = ({title,tech,image,desc,cardDes}) => {
   return (
      <>
-      <div className="w-full h-full bg-white/10 border border-yellow-300 sm:border-none rounded-xl p-2 flex flex-col">
+      <motion.div className="w-full h-full bg-white/10 border border-yellow-300 sm:border-none rounded-xl p-2 flex flex-col"
+       initial = {{opacity : 0 , y:100}}
+      whileInView = {{opacity : 1 , y:0}}
+      viewport={{once:true,amount:0.2}}
+       transition={{ duration: 0.9, ease: "easeInOut" }}>
       <div className='flex flex-col grow justify-between'> 
         <div className="object-cover overflow-hidden pt-5">
               <img
@@ -66,7 +71,7 @@ const ProjectCard:React.FC<Data> = ({title,tech,image,desc,cardDes}) => {
               </Button>
             </div>
            
-          </div>
+          </motion.div>
      </>
   )
 }

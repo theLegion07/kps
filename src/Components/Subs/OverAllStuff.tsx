@@ -2,6 +2,31 @@ import { motion, useReducedMotion } from "framer-motion";
 import { CopyIcon } from "lucide-react";
 import { useState } from "react";
 import { techIcons } from "../../utils/techIcons";
+import { useMediaQuery } from "@mui/material";
+
+const MobileVarients = {
+  hidden: { opacity: 0, y: 100 },
+  show: { opacity: 1, y: 0 },
+};
+
+const desktopVarients = {
+  box1: {
+    hidden: { opacity: 0, x: -200 },
+    show: { opacity: 1, x: 0 },
+  },
+  box2: {
+    hidden: { opacity: 0, y: -200 },
+    show: { opacity: 1, y: 0 },
+  },
+  box3: {
+    hidden: { opacity: 0, x: 20 },
+    show: { opacity: 1, x: 0 },
+  },
+  box4: {
+    hidden: { opacity: 0, y: 100 },
+    show: { opacity: 1, y: 0 },
+  },
+};
 
 export const OverAllStuff = () => {
   const [copy, setCopy] = useState<boolean>(false);
@@ -14,6 +39,8 @@ export const OverAllStuff = () => {
       setCopy(false);
     }, 100);
   };
+  const isModile = useMediaQuery("(max-width:700px)");
+  const variants = isModile ? MobileVarients : desktopVarients;
   const techStack = [
     { id: 0, name: "Java", icon: techIcons.java },
     { id: 1, name: "Python", icon: techIcons.python },
@@ -47,9 +74,12 @@ export const OverAllStuff = () => {
           className="lg:col-span-3 group  p-10 w-full rounded-2xl bg-white/5 shadow-[inset_0_0_10px_rgba(255,255,255,0.3)]
       hover:shadow-[inset_0_0_10px_rgba(255,255,0.5)]
 "
-          initial={{ opacity: 0, x: -200 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{once:true, amount: 0.3 }}
+          variants={
+            variants === desktopVarients ? variants.box1 : MobileVarients
+          }
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.9, ease: "easeInOut" }}
         >
           <h1 className="text-white text-primary-font text-sm sm:text-xl lg:text-3xl mb-5 group-hover:text-yellow-300">
@@ -67,9 +97,12 @@ export const OverAllStuff = () => {
         <motion.div
           className=" lg:row-span-2 group relative flex flex-col justify-between  p-10 w-full rounded-2xl bg-white/5 shadow-[inset_0_0_10px_rgba(255,255,255,0.3)] *: hover:shadow-[inset_0_0_10px_rgba(255,255,0.5)]
 "
-          initial={{ opacity: 0, y: -200 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{once:true, amount: 0.3 }}
+          variants={
+            variants === desktopVarients ? variants.box2 : MobileVarients
+          }
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.9, ease: "easeInOut" }}
         >
           {" "}
@@ -100,7 +133,7 @@ export const OverAllStuff = () => {
                 }}
                 whileHover={{ animationPlayState: "paused" }}
               >
-                {[...techStack, ...techStack].map((tech,index) => (
+                {[...techStack, ...techStack].map((tech, index) => (
                   <span
                     key={`${tech.id}-${index}`}
                     className="px-4 py-2 text-sm tracking-wide bg-white text-black hover:scale-[1.02] hover:shadow-[0_0_10px_rgba(0,0,0,0.3)] 
@@ -123,9 +156,12 @@ export const OverAllStuff = () => {
        hover:shadow-[inset_0_0_10px_rgba(255,255,0.5)]
        group
 "
-          initial={{ opacity: 0, x: 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{once:true, amount: 0.3 }}
+          variants={
+            variants === desktopVarients ? variants.box3 : MobileVarients
+          }
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 1, ease: "easeInOut" }}
         >
           <h1 className="text-white text-primary-font text-sm  lg:text-3xl sm:text-xl  mb-5 group-hover:text-yellow-300">
@@ -142,9 +178,12 @@ export const OverAllStuff = () => {
           className="lg:col-span-2 p-10 group w-full rounded-2xl bg-white/5 flex flex-col gap-6 justify-center items-center shadow-[inset_0_0_10px_rgba(255,255,255,0.3)]
        hover:shadow-[inset_0_0_10px_rgba(255,255,0.5)]
 "
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{once:true, amount: 0.3 }}
+          variants={
+            variants === desktopVarients ? variants.box4 : MobileVarients
+          }
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 1, ease: "easeInOut" }}
         >
           <h1 className="text-white text-sm sm:text-xl lg:text-3xl group-hover:text-yellow-300 ">
