@@ -22,6 +22,9 @@ const FTT = [
              {id:8,name:"Figma", icon:techIcons.figma}, 
 
 ]
+const Backend = [
+  {id: 0 ,name:"Express.js" , icon: techIcons.express}
+]
 const DataB = [
   {id:0,name:"MySql",icon:techIcons.mysql},
 ]
@@ -130,7 +133,25 @@ const Cloud = [
                   </div>
                  ))}
               </div>
+              
             </div>
+             <div className="mt-3">
+               <p className="text-justify hyphens-auto text-white/60 font-normal">
+              Back End Technologies
+            </p>
+              <div className="flex  gap-2  flex-wrap sm:gap-2 mt-3 ">
+                 {Backend.map((lang) => (
+                  <div key={lang.id} className="flex max-w-max gap-2 bg-white/15 py-1 px-4 rounded-sm">
+                     <img src={lang.icon}  className="w-4 aspect-square"/>
+                     <p className="text-justify hyphens-auto text-white/60 font-normal text-sm">
+              {lang.name}
+            </p>
+                  </div>
+                 ))}
+              </div>
+              
+            </div>
+            
               <div className="mt-3">
                <p className="text-justify hyphens-auto text-white/60 font-normal">
              DataBase

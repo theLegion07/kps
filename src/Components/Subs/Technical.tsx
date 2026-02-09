@@ -5,15 +5,12 @@ import { containerVariants, itemVariants } from "../../utils/pageAnimations"
 
 const Technical = () => {
   const [techType,setTechType] = useState<string>("Languages")
- 
-
-
-
   const section = [
     {id:0,name:"Languages",sectionType:"Languages"},
     {id:1,name:"Front-End", sectionType:"Front-End"},
     {id:2,name:"DataBase",sectionType:"DataBase"},
-    {id:3,name:"Cloud",sectionType:"Cloud"},
+    {id:3,name:"Back-End",sectionType:"Back-End"},
+    {id:4,name:"Cloud",sectionType:"Cloud"},
   ]
    const language = [
       {id:0 , name:"Java",icon:techIcons.java},
@@ -21,6 +18,9 @@ const Technical = () => {
       {id:2 , name:"Python",icon:techIcons.python},
     {id:3 ,name:"JavaScript",icon:techIcons.javascript},
     {id:4 ,name:"TypeScript",icon:techIcons.typescript},
+  ]
+  const BackEnd = [
+    {id:0,name:"Express.js",icon:techIcons.express}
   ]
   const FrontEnd = [
     {id:0 ,name:"HTML5",icon:techIcons.html5},
@@ -43,6 +43,7 @@ const Technical = () => {
   const techMap:any = {
     Languages : language,
     "Front-End" : FrontEnd ,
+    "Back-End":BackEnd,
     DataBase : DataB,
     Cloud : cloud ,
   }
