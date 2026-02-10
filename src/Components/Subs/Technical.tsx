@@ -54,8 +54,8 @@ const Technical = () => {
          <h1 className='text-white text-2xl text-primary-font sm:text-3xl md:text-4xl font-bold '>Technological Brilliance</h1>
          <p className='text-white/60 text-sm sm:text-1xl md:text-xl '>Demonstrated proficiency in a broad spectrum of technologies and tools.</p>
       </div>
-      <div className="flex flex-col gap-10 justify-center w-full items-center p-4">
-         <ul className="flex rounded-xl gap-5  text-primary-font p-2 bg-white/15 ">
+      <div className="flex flex-col gap-10 justify-center w-full items-center p-2">
+         <ul className="flex rounded sm:rounded-xl  text-primary-font p-2 bg-white/15 ">
         {section.map((item)=>(
           <li key={item.id} onClick={() => setTechType(item.sectionType)} className={`rounded-sm py-1 px-3 text-xs sm:text-[1em] cursor-pointer transition-all duration-200 whitespace-nowrap
   ${
