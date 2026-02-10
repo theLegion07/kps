@@ -17,8 +17,8 @@ const Articles = () => {
        <p className='text-white/60 text-sm sm:text-1xl md:text-xl ' >Currently working on articles may be in future This Page Gets Updated </p>
         </div>
         <div className=" rounded-xl grid  grid-cols-[repeat(auto-fit,minmax(280px,1fr))]
-          auto-rows-[minmax(min-content,auto)] place-content-center place-items-center gap-2">
-  {Array.from({ length: 3 }).map(( _ , i) => (
+          auto-rows-[minmax(min-content,auto)] place-content-center place-items-center gap-7 p-5 sm:p-10 lg:grid-cols-3">
+  {Array.from({ length: 6 }).map(( _ , i) => (
     <Skeleton key={i} />
   ))}
 </div>
